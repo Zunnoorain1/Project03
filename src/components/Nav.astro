@@ -1,0 +1,74 @@
+---
+/**
+ * Nav — sticky 64px top bar. Logo wordmark left, link row centre,
+ * primary CTA pill right. Collapses to logo + CTA on mobile.
+ *
+ * Sticky surface uses canvas (pure white) with a 1px hairline bottom border
+ * per DESIGN.md nav-bar component.
+ */
+---
+
+<header class="sticky top-0 z-50 bg-canvas border-b border-hairline">
+  <nav
+    class="max-w-[1400px] mx-auto h-16 px-md sm:px-lg flex items-center justify-between gap-md"
+    aria-label="Primary"
+  >
+    <!-- Logo wordmark -->
+    <a href="/" class="flex items-center gap-2 group" aria-label="Free PDF to Quiz — home">
+      <span
+        class="inline-block w-6 h-6 rounded-md bg-ink relative overflow-hidden"
+        aria-hidden="true"
+      >
+        <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-cyan"></span>
+      </span>
+      <span class="text-body-sm-strong tracking-tight text-ink">
+        Free PDF to Quiz
+      </span>
+    </a>
+
+    <!-- Centre link row (desktop) -->
+    <ul class="hidden md:flex items-center gap-xs text-body-sm text-body">
+      <li>
+        <a
+          href="#features"
+          class="px-sm py-xs rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors"
+        >
+          Features
+        </a>
+      </li>
+      <li>
+        <a
+          href="#how-it-works"
+          class="px-sm py-xs rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors"
+        >
+          How it works
+        </a>
+      </li>
+      <li>
+        <a
+          href="#faq"
+          class="px-sm py-xs rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors"
+        >
+          FAQ
+        </a>
+      </li>
+    </ul>
+
+    <!-- CTA cluster -->
+    <div class="flex items-center gap-xs">
+      <a
+        href="https://github.com"
+        class="hidden sm:inline-flex items-center h-7 px-xs text-body-sm-strong text-body hover:text-ink transition-colors"
+        aria-label="View on GitHub"
+      >
+        GitHub
+      </a>
+      <a
+        href="/app"
+        class="inline-flex items-center h-8 px-sm text-body-sm-strong bg-ink text-on-primary rounded-pill hover:opacity-90 transition-opacity"
+      >
+        Start for free
+      </a>
+    </div>
+  </nav>
+</header>
